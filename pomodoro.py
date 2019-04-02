@@ -17,7 +17,7 @@ mins = 0
 
 print("\n\n Starting.... \n\n")
 while mins != count:
-    print(">>>>>>>>>>>> " + str(mins))
+    print(">>>>>>>>>>>> " + str(mins + 1))
     time.sleep(60)
     mins += 1
 
