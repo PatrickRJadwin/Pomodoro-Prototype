@@ -9,12 +9,8 @@ print("Welcome to Pomodoro Timer!")
 
 try:
     count = int(sys.argv[1])
-except ValueError:
-    print("The number is invalid")
-    count = 25
-
-if (count < 1):
-    print("The number is invalid")
+except (ValueError, IndexError):
+    print("The number is null or invalid\nDefault Number is 25")
     count = 25
 
 mins = 0
