@@ -5,6 +5,22 @@ import sys
 import tkinter as tk
 from tkinter import messagebox
 
+minute = 60
+
+
+def breakpnt(breaktime):
+    messagebox.showwarning("Time is up!", "Please take a 5 minute break starting now")
+    root.update
+    x = breaktime
+    for i in range(breaktime):
+        print(str(x) + " minutes remaining")
+        x -= 1
+        time.sleep(minute)
+    messagebox.showwarning("Back to work!", "Please resume your work")
+    root.update
+    print("\n\n\nResuming...\n\n\n")
+
+
 print("Welcome to Pomodoro Timer!")
 
 try:
@@ -24,28 +40,10 @@ while True:
         time.sleep(60) #60 = 1 min
         mins += 1
     elif breakcnt < 3:
-        messagebox.showwarning("Time is up!", "Please take a 5 minute break starting now")
-        root.update
-        x = 5
-        for i in range(5):
-            print(str(x) + " minutes remaining")
-            x -= 1
-            time.sleep(60)
-        messagebox.showwarning("Back to work!", "Please resume your work")
-        root.update
+        breakpnt(5) 
         mins = 1
         breakcnt += 1
-        print("\n\nResuming...\n\n\n")
     elif breakcnt >= 3:
-        messagebox.showwarning("Time is up!", "Please take a 25 minute break, you've earned it.'")
-        root.update
-        x = 25
-        for i in range(25):
-            print(str(x) + " minutes remaining")
-            x -= 1
-            time.sleep(60)
-        messagebox.showwarning("Back to work!", "Please resume your work")
-        root.update
+        breakpnt(25) 
         mins = 1
         breakcnt = 0
-        print("\n\nResuming...\n\n\n")
