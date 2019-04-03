@@ -5,9 +5,15 @@ import sys
 import tkinter as tk
 from tkinter import messagebox
 
+<<<<<<< Updated upstream
 minute = 60
+=======
+#Global
+minute = 60 
+>>>>>>> Stashed changes
 
 
+#Method to initiate work-breaks
 def breakpnt(breaktime):
     messagebox.showwarning("Time is up!", "Please take a 5 minute break starting now")
     root.update
@@ -23,12 +29,14 @@ def breakpnt(breaktime):
 
 print("Welcome to Pomodoro Timer!")
 
+#User variable
 try:
     count = int(sys.argv[1])
 except (ValueError, IndexError):
     print("The number is null or invalid\nDefault Number is 25")
     count = 25
 
+#Loop control
 mins = 1
 breakcnt = 0
 root = tk.Tk()
