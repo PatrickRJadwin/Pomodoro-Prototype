@@ -5,11 +5,11 @@ import sys
 import tkinter as tk
 from tkinter import messagebox
 
-minute = 60
+minute = 1 
 
 
 def breakpnt(breaktime):
-    messagebox.showwarning("Time is up!", "Please take a 5 minute break starting now")
+    messagebox.showwarning("Time is up!", "Please take a " + str(breaktime) + " minute break starting now")
     root.update
     x = breaktime
     for i in range(breaktime):
@@ -37,7 +37,7 @@ print("\n\n Starting.... \n\n")
 while True:
     if mins <= count:
         print(">>>>>>>>>>>> " + str(mins))
-        time.sleep(60) #60 = 1 min
+        time.sleep(minute) #60 = 1 min
         mins += 1
     elif breakcnt < 3:
         breakpnt(5) 
