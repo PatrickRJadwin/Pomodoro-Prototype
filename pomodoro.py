@@ -5,7 +5,7 @@ import sys
 import tkinter as tk
 from tkinter import messagebox
 
-minute = 1 
+minute = 60 
 
 
 def breakpnt(breaktime):
