@@ -11,7 +11,7 @@ minute = 60
 
 #Method to initiate work-breaks
 def breakpnt(breaktime):
-    messagebox.showwarning("Time is up!", "Please take a " + breaktime + " minute break starting now")
+    messagebox.showwarning("Time is up!", "Please take a " + str(breaktime) + " minute break starting now")
     root.update
     x = breaktime
     for i in range(breaktime):
@@ -41,7 +41,7 @@ print("\n\n Starting.... \n\n")
 while True:
     if mins <= count:
         print(">>>>>>>>>>>> " + str(mins))
-        time.sleep(60) #60 = 1 min
+        time.sleep(minute) #60 = 1 min
         mins += 1
     elif breakcnt < 3:
         breakpnt(5) 
