@@ -7,6 +7,8 @@ from tkinter import messagebox
 
 #Global
 minute = 60 
+sbreak = 5
+lbreak = 25
 
 
 #Method to initiate work-breaks
@@ -44,10 +46,10 @@ while True:
         time.sleep(minute) #60 = 1 min
         mins += 1
     elif breakcnt < 3:
-        breakpnt(5) 
+        breakpnt(sbreak) 
         mins = 1
         breakcnt += 1
     elif breakcnt >= 3:
-        breakpnt(25) 
+        breakpnt(lbreak) 
         mins = 1
         breakcnt = 0
